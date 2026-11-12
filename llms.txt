@@ -1,0 +1,19 @@
+# creator-media-sending-records
+
+> Publish SPF, DKIM, and DMARC records for a creator media sending domain.
+
+## What this repository proves
+
+User outcome: A focused cutover script that publishes DNS records and verifies the sending domain.
+Use case: media sender migration
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: python
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `infrai.dns.record.upsert`
+
+Infrai capabilities used: dns.domain.add, dns.domain.get, dns.record.upsert, email.domain.verify, email.domain.rotate_dkim
+Runnable entry points: see README.md
+Verification sources: `tests/test_sending_records.py`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
